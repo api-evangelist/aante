@@ -1,0 +1,75 @@
+generated: '2026-09-05'
+method: probed
+source: live HTTPS probes of every host this record knows (ant-fa.com, www.ant-fa.com)
+note: >-
+  No /.well-known document is served on any Aante host. Every path either returns a
+  JSON 404 ({}) or answers HTTP 200 with the 31KB Nuxt single-page-application shell
+  that ant-fa.com serves for any unmatched route — an HTML catch-all, not a document.
+  Those 200s are recorded below as misses with shell: true. No WellKnown or SecurityTxt
+  pointer is emitted, because the provider serves none of these surfaces.
+hosts:
+- host: ant-fa.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 200
+    shell: true
+    content_type: text/html
+    file: null
+    note: HTML SPA catch-all, not an OpenID Provider metadata document
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    shell: true
+    content_type: text/html
+    file: null
+    note: HTML SPA catch-all, not RFC 8414 metadata
+  - path: /.well-known/api-catalog
+    status: 200
+    shell: true
+    content_type: text/html
+    file: null
+    note: HTML SPA catch-all, not an RFC 9727 api-catalog document
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+- host: www.ant-fa.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 200
+    shell: true
+    content_type: text/html
+    file: null
+    note: HTML SPA catch-all
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    shell: true
+    content_type: text/html
+    file: null
+    note: HTML SPA catch-all
+  - path: /.well-known/api-catalog
+    status: 200
+    shell: true
+    content_type: text/html
+    file: null
+    note: HTML SPA catch-all
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+checked: '2026-09-05'

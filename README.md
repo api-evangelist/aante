@@ -64,5 +64,20 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Aante is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
+Aante (爱安特) — Aante (Changzhou) Precision Machinery Co., Ltd. (爱安特（常州）精密机械有限公司) — is a
+Chinese factory-automation (FA) parts distributor and one-stop industrial e-commerce procurement
+platform headquartered in Changzhou, Jiangsu. Established in 2002 as the successor to Sandi
+Automation, it sells linear-motion, transmission, standard, machined, framing, motion-unit,
+electrical and pneumatic components across 96 product categories and roughly two million SKUs,
+distributing 30+ international brands including SMC and THK alongside its own Aante-branded line,
+to customers in semiconductors, new energy, 3C electronics, photovoltaics, LCD, automotive,
+medical and food manufacturing.
+
+**No public API.** A 2026-09-05 enrichment pass probed every host this record knows and found no
+developer portal, API reference, or machine-readable contract — no OpenAPI, GraphQL, MCP server,
+agent card, `llms.txt` or `/.well-known/` document, and no `api.` / `open.` / `developer.`
+subdomain. See `well-known/aante-well-known.yml` for the probe log and the `x-coverage` block in
+`apis.yml` for the coverage finding.
+
+- https://ant-fa.com/
 - https://equityzen.com/company/aante

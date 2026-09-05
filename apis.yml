@@ -1,17 +1,36 @@
 aid: aante
 name: Aante
-description: 'Aante is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'Aante (爱安特) is a Chinese factory-automation (FA) parts distributor and
+  one-stop industrial e-commerce procurement platform, operated by Aante (Changzhou)
+  Precision Machinery Co., Ltd. (爱安特（常州）精密机械有限公司) and headquartered in Changzhou,
+  Jiangsu. Established in 2002 as the successor to Sandi Automation, it sells linear
+  motion, transmission, standard, machined, framing, motion-unit, electrical and pneumatic
+  components across 96 product categories and roughly two million SKUs, distributing
+  30+ international brands including SMC and THK alongside its own Aante-branded line.
+  It serves customers in semiconductors, new energy, 3C electronics, photovoltaics,
+  LCD, automotive, medical and food manufacturing from three production bases and
+  30+ service centers, and in 2026 acquired software firm Zhuiguang Geometry to pair
+  components with design software. The storefront at ant-fa.com is a Chinese-language
+  Nuxt commerce site; no public developer program, API reference, or machine-readable
+  contract is published.'
+image: https://dioguwdgf472v.cloudfront.net/media/logos/equityinvest/Company/aante_logo-55305772a85f0ab3.png
 url: https://raw.githubusercontent.com/api-evangelist/aante/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
 specificationVersion: '0.20'
 created: '2026-09-05'
 modified: '2026-09-05'
 tags:
 - Company
+- Industrial Automation
+- Factory Automation
+- Manufacturing
+- Distribution
+- E-Commerce
+- Procurement
+- Industrial Components
+- China
+position: Producing
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +38,49 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/aante-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/aante
+  url: https://ant-fa.com/
+- type: Blog
+  url: https://ant-fa.com/notice/news/
+- type: TermsOfService
+  url: https://ant-fa.com/notice/notice-detail/44/?id=44
+- type: PrivacyPolicy
+  url: https://ant-fa.com/notice/notice-detail/254/?id=254
+- type: SignUp
+  url: https://ant-fa.com/login
+- type: LLMsTxt
+  url: llms/aante-llms.txt
+- type: Plans
+  url: plans/aante-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/aante-rate-limits.yml
+x-enrichment:
+  date: '2026-09-05'
+  status: minimal
+  artifacts_added: 5
+  pass: local-v3
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    Aante sells factory-automation components through a Chinese-language Nuxt storefront at
+    ant-fa.com and ships no developer surface at all — /openapi.json, /swagger.json and
+    /llms.txt return 404, /graphql, /api-docs, /docs and every /.well-known/ path return the
+    site's 31KB single-page-application HTML shell with HTTP 200, and api./open./developer./
+    docs./gateway.ant-fa.com are all NXDOMAIN.
+  evidence:
+  - url: https://ant-fa.com/openapi.json
+    status: 404
+  - url: https://ant-fa.com/llms.txt
+    status: 404
+  - url: https://ant-fa.com/.well-known/agent-card.json
+    status: 404
+  - url: https://ant-fa.com/.well-known/security.txt
+    status: 404
+  - url: https://ant-fa.com/graphql
+    status: 200
+  - url: https://ant-fa.com/
+    status: 200
+  checked: '2026-09-05'

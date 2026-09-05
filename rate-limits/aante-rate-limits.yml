@@ -1,0 +1,14 @@
+generated: '2026-09-05'
+method: searched
+source: https://ant-fa.com/
+limit_count: 0
+note: >-
+  No rate limits are documented, because Aante publishes no API. No developer portal,
+  API reference, or machine-readable contract was found on any host (see
+  well-known/aante-well-known.yml and llms/aante-llms.txt for the probe log), so there
+  is no documented quota, window, burst allowance, RateLimit-* response header or
+  exhaustion status code to record. The site's robots.txt sets Crawl-delay: 120 for
+  Mediapartners-Google and disallows all user-agents outside its named crawler
+  allowlist — a crawl policy, not an API rate limit.
+rate_limits: []
+headers: []
